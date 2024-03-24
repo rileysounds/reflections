@@ -25,11 +25,11 @@ struct HomeView: View {
             .padding(.horizontal, 25)
             .padding(.top, 25)
             
+            // Tracks section
             Text("Latest tracks:")
                 .padding(.horizontal, 25)
                 .padding(.top, 15)
             
-            // horizontal collectionview
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 20) {
                     ForEach(horizontalItems, id: \.self) { color in
@@ -41,6 +41,7 @@ struct HomeView: View {
             }
             .frame(height: 135)
             
+            // Mixes section
             Text("Latest mixes:")
                 .padding(.horizontal, 25)
                 .padding(.top, 15)
@@ -73,23 +74,3 @@ class HomeViewController: UIHostingController<HomeView> {
     }
 }
 
-struct NowPlayingView: View {
-    var body: some View {
-        ZStack {
-            Color.gray
-            HStack(spacing: 25) {
-                Image(systemName: "play.fill")
-                    .font(.system(size: 25))
-                    .padding(.leading, 15)
-                
-                VStack {
-                    Text("Track name")
-                    Text("Artist name")
-                }
-                
-                Spacer()
-            }
-            .foregroundStyle(.black)
-        }
-    }
-}

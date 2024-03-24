@@ -10,9 +10,8 @@ import SwiftUI
 
 
 struct RadioView: View {
-    // Dummy data
-    let currentTrack = "Track Name"
-    let currentArtist = "Artist Name"
+    let currentTrack = "Dreams"
+    let currentArtist = "Riley Wells"
 
     @State private var isPlaying = false
     @State private var seekPosition: Double = 0.0 // Simulates the track's current position
@@ -47,6 +46,9 @@ struct RadioView: View {
             HStack {
                 // Play/Pause button
                 Button(action: {
+                    isPlaying == true
+                    ? AudioManager.shared.pause()
+                    : AudioManager.shared.play()
                     isPlaying.toggle()
                 }) {
                     Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
@@ -71,6 +73,8 @@ class RadioViewController: UIHostingController<RadioView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AudioManager.shared.setUpAudioSession()
+        AudioManager.shared.loadLocalAudioFile(named: "Dreams", withExtension: "mp3") // add this in
     }
 
     // Radio UI
