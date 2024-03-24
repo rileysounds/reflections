@@ -13,10 +13,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let homeViewController = HomeViewController(rootView: HomeView())
+        let musicViewController = MusicViewController(rootView: MusicView())
+        let radioViewController = RadioViewController(rootView: RadioView())
+        let submissionViewController = SubmissionViewController(rootView: SubmissionView())
+
+        homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "1.circle"), tag: 0)
+        musicViewController.tabBarItem = UITabBarItem(title: "Music", image: UIImage(systemName: "2.circle"), tag: 1)
+        radioViewController.tabBarItem = UITabBarItem(title: "Radio", image: UIImage(systemName: "3.circle"), tag: 2)
+        submissionViewController.tabBarItem = UITabBarItem(title: "Submit Music", image: UIImage(systemName: "4.circle"), tag: 3)
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [homeViewController,
+                                            musicViewController,
+                                            radioViewController,
+                                            submissionViewController]
+        
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = tabBarController
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
