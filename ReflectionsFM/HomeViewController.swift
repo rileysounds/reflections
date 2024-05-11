@@ -2,8 +2,12 @@ import UIKit
 import SwiftUI
 
 struct HomeView: View {
-    let horizontalItems = [Color.red, Color.green, Color.blue, Color.orange, Color.purple]
-    let verticalItems = ["List Item 1", "List Item 2", "List Item 3", "List Item 4", "List Item 5"]
+    let horizontalImages = [Image(.art1), Image(.art2), Image(.art3), Image(.art4),
+                           Image(.art5), Image(.art6), Image(.art7), Image(.art8)]
+    
+    let verticalImages = [Image(.art1), Image(.art2), Image(.art3), Image(.art4),
+                          Image(.art5), Image(.art6), Image(.art7), Image(.art8)]
+    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -16,7 +20,7 @@ struct HomeView: View {
                 // Profile button
                 ZStack {
                     Circle()
-                        .foregroundStyle(.cyan)
+                        .foregroundStyle(.red)
                         .frame(width: 35, height: 35)
                     Text("RW")
                         .foregroundStyle(.white)
@@ -32,14 +36,17 @@ struct HomeView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 20) {
-                    ForEach(horizontalItems, id: \.self) { color in
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(color)
+                    ForEach(0..<horizontalImages.count, id: \.self) { index in
+                        horizontalImages[index]
+                            .resizable()
+                            .scaledToFit()
                             .frame(width: 100, height: 100)
+                            .cornerRadius(25)
                     }
                 }
             }
             .frame(height: 135)
+            .padding(.horizontal, 25)
             
             // Mixes section
             Text("Latest mixes:")
@@ -48,11 +55,8 @@ struct HomeView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack(spacing: 20) {
-                    ForEach(verticalItems, id: \.self) { text in
-                        HStack {
-                            Text(text)
-                            Spacer()
-                        }
+                    ForEach(0..<verticalImages.count, id: \.self) { index in
+                        MixItem(image: verticalImages[index])
                     }
                 }
             }
@@ -69,8 +73,32 @@ struct HomeView: View {
 }
 
 class HomeViewController: UIHostingController<HomeView> {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    
+    
 }
 
+struct MixItem: View {
+    var image: Image
+    
+    var body: some View {
+        
+        HStack {
+            image
+                .resizable()
+                .scaledToFit()
+                .frame(width: 40, height: 40)
+                .padding(.trailing, 25)
+            
+            
+            VStack(alignment: .leading) {
+                Text("Artist Name")
+                Text("Mix Title")
+            }
+            
+            Spacer()
+            
+            Image(systemName: "play.fill")
+        }
+        
+    }
+}

@@ -13,6 +13,9 @@
 		8327B31E2BAE2FF400D246EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8327B31C2BAE2FF400D246EB /* Main.storyboard */; };
 		8327B3202BAE2FF400D246EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8327B31F2BAE2FF400D246EB /* Assets.xcassets */; };
 		8327B3232BAE2FF400D246EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8327B3212BAE2FF400D246EB /* LaunchScreen.storyboard */; };
+		838E96592BEFBC2200C2BC0E /* RFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E96582BEFBC2200C2BC0E /* RFTabBarController.swift */; };
+		838E965B2BEFBC8700C2BC0E /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E965A2BEFBC8700C2BC0E /* AuthenticationManager.swift */; };
+		838E965D2BEFBD2700C2BC0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E965C2BEFBD2700C2BC0E /* LoginViewController.swift */; };
 		83AD4AD62BB0680C00408EC6 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4AD52BB0680C00408EC6 /* MusicViewController.swift */; };
 		83AD4AD82BB06BB800408EC6 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4AD72BB06BB800408EC6 /* RadioViewController.swift */; };
 		83AD4ADA2BB06C3D00408EC6 /* SubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4AD92BB06C3D00408EC6 /* SubmissionViewController.swift */; };
@@ -30,6 +33,9 @@
 		8327B31F2BAE2FF400D246EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8327B3222BAE2FF400D246EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8327B3242BAE2FF400D246EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		838E96582BEFBC2200C2BC0E /* RFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFTabBarController.swift; sourceTree = "<group>"; };
+		838E965A2BEFBC8700C2BC0E /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		838E965C2BEFBD2700C2BC0E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83AD4AD52BB0680C00408EC6 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		83AD4AD72BB06BB800408EC6 /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		83AD4AD92BB06C3D00408EC6 /* SubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +58,6 @@
 		8327B30A2BAE2FF400D246EB = {
 			isa = PBXGroup;
 			children = (
-				83AD4ADB2BB08DBA00408EC6 /* NowPlayingView.swift */,
 				8327B3152BAE2FF400D246EB /* ReflectionsFM */,
 				8327B3142BAE2FF400D246EB /* Products */,
 			);
@@ -71,9 +76,13 @@
 			children = (
 				8327B3162BAE2FF400D246EB /* AppDelegate.swift */,
 				8327B3182BAE2FF400D246EB /* SceneDelegate.swift */,
+				838E96582BEFBC2200C2BC0E /* RFTabBarController.swift */,
+				838E965C2BEFBD2700C2BC0E /* LoginViewController.swift */,
+				838E965A2BEFBC8700C2BC0E /* AuthenticationManager.swift */,
 				8327B31A2BAE2FF400D246EB /* HomeViewController.swift */,
 				83AD4AD92BB06C3D00408EC6 /* SubmissionViewController.swift */,
 				83AD4AD52BB0680C00408EC6 /* MusicViewController.swift */,
+				83AD4ADB2BB08DBA00408EC6 /* NowPlayingView.swift */,
 				83AD4ADD2BB08DE700408EC6 /* AudioManager.swift */,
 				83AD4AD72BB06BB800408EC6 /* RadioViewController.swift */,
 				8327B31C2BAE2FF400D246EB /* Main.storyboard */,
@@ -157,14 +166,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838E96592BEFBC2200C2BC0E /* RFTabBarController.swift in Sources */,
 				83AD4AD62BB0680C00408EC6 /* MusicViewController.swift in Sources */,
 				83AD4AD82BB06BB800408EC6 /* RadioViewController.swift in Sources */,
+				838E965B2BEFBC8700C2BC0E /* AuthenticationManager.swift in Sources */,
 				83AD4ADE2BB08DE700408EC6 /* AudioManager.swift in Sources */,
 				83AD4ADA2BB06C3D00408EC6 /* SubmissionViewController.swift in Sources */,
 				8327B31B2BAE2FF400D246EB /* HomeViewController.swift in Sources */,
 				8327B3172BAE2FF400D246EB /* AppDelegate.swift in Sources */,
 				83AD4ADC2BB08DBA00408EC6 /* NowPlayingView.swift in Sources */,
 				8327B3192BAE2FF400D246EB /* SceneDelegate.swift in Sources */,
+				838E965D2BEFBD2700C2BC0E /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +333,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,6 +362,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

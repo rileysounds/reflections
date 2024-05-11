@@ -8,33 +8,103 @@
 import UIKit
 import SwiftUI
 
+class SubmissionViewController: UIHostingController<SubmissionView> {
 
-struct SubmissionView: View {
-    var body: some View {
-        // Title Label
-        
-        // Submission form text fields
-        // link, artist name, artist email, info on the track
-        
-        
-        // submit button
-        
-        
-        
-        Text("Submit Music View")
-            .padding()
+    override init(rootView: SubmissionView = SubmissionView(onSubmit: {})) {
+        super.init(rootView: rootView)
+        self.rootView = SubmissionView(onSubmit: submitAction)
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.rootView = SubmissionView(onSubmit: submitAction)
+    }
+    
+    private func submitAction() {
+        let alertController = UIAlertController(title: "Success",
+                                                message: "Your submission was sent. Please wait for a response.",
+                                                preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            // navigate back to home screen
+            self.tabBarController?.selectedIndex = 0
+        }
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+
 }
 
-class SubmissionViewController: UIHostingController<SubmissionView> {
+struct SubmissionView: View {
+    @State private var artistName: String = ""
+    @State private var email: String = ""
+    @State private var link: String = ""
+    @State private var description: String = ""
+    @State private var selectedSegment: Int = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var onSubmit: () -> Void
+    
+    var body: some View {
+        VStack {
+            Text("Submit your music")
+            // artist name
+            TextField("Artist Name", text: $artistName)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.vertical, 15)
+                .padding(.horizontal, 25)
+            
+            // email
+            TextField("Email", text: $email)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.vertical, 15)
+                .padding(.horizontal, 25)
+            
+            // track link
+            TextField("Link to track or mix", text: $link)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.vertical, 15)
+                .padding(.horizontal, 25)
+            
+            // segmented control for track, morning drive or mirrrors
+            Picker("", selection: $selectedSegment) {
+                Text("Original Track").tag(0)
+                Text("Mirrors Mix").tag(1)
+                Text("Morning Drive").tag(2)
+            }
+            .pickerStyle(.segmented)
+            .padding()
+            
+            // something about it
+            Text("Tell us about your creation:")
+            TextEditor(text: $description)
+                .frame(height: 200)
+                .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.gray, lineWidth: 1)  // Adding a border
+                        .frame(height: 200)
+                )
+                .padding(.horizontal, 25)
+                .padding(.vertical, 15)
+            
+            // submit button
+            Button {
+                resetPage()
+                onSubmit()
+            } label: {
+                Text("Submit")
+            }
+        }
+        
     }
-    
-    // page where artists paste a link
-    // give some info
-    // segmented control for track, morning drive or regular mix
-    // this fires off an email with the info to RFM
-    
+
+    func resetPage() {
+        artistName = ""
+        email = ""
+        link = ""
+        selectedSegment = 0
+        description = ""
+    }
 }
