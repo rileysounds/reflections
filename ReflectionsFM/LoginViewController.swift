@@ -13,6 +13,14 @@ class LoginViewController: UIHostingController<LoginView> {
         self.rootView = LoginView(onSubmit: submitAction)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Task {
+            let fetchedTracks = try await NetworkManager.shared.fetchTracks()
+            MusicService.shared.store(fetchedTracks)
+        }
+    }
+    
     private func submitAction() {
         let tabNav = RFTabBarController()
         tabNav.modalPresentationStyle = .overFullScreen
@@ -50,7 +58,6 @@ struct LoginView: View {
             .padding(.horizontal, 25)
             
             Button {
-                print("button tapped")
                 onSubmit()
             } label: {
                 Text("Submit")

@@ -27,11 +27,6 @@ struct MusicView: View {
             Text("Music View")
                 .padding()
             
-            Button("Fetch Tracks") {
-                Task {
-                    try await NetworkManager.shared.fetchTracks()
-                }
-            }
         }
     }
 }

@@ -1,8 +1,13 @@
 import AVFoundation
+import Combine
 
-class AudioManager {
+class AudioManager: ObservableObject {
     
     static var shared = AudioManager()
+    
+    @Published var currentTrack: Track?
+    
+    @Published var isPlaying: Bool = false
     
     var player: AVPlayer?
     
@@ -20,10 +25,12 @@ class AudioManager {
     }
     
     func play() {
+        isPlaying.toggle()
         player?.play()
     }
 
     func pause() {
+        isPlaying.toggle()
         player?.pause()
     }
     
@@ -34,6 +41,15 @@ class AudioManager {
         }
         let fileURL = URL(fileURLWithPath: filePath)
         player = AVPlayer(url: fileURL)
+    }
+
+    func loadRemoteAudioFile(from url: String, track: Track) {
+        guard let fileURL = URL(string: url) else {
+            print("::: AM - Invalid URL")
+            return
+        }
+        player = AVPlayer(url: fileURL)
+        currentTrack = track
     }
 
     func seek(to position: Double) {

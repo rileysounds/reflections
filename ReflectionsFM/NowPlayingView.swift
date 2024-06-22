@@ -2,17 +2,24 @@ import SwiftUI
 
 
 struct NowPlayingView: View {
+    @StateObject var viewModel = NowPlayingViewModel()
+    
     var body: some View {
         ZStack {
             Color.gray
             HStack(spacing: 25) {
-                Image(systemName: "play.fill") // this should be a button
-                    .font(.system(size: 25))
-                    .padding(.leading, 15)
+                Button(action: {
+                    viewModel.togglePlayPause()
+                    viewModel.isPlaying = AudioManager.shared.isPlaying
+                }) {
+                    Image(systemName: viewModel.isPlaying ? "pause.fill" : "play.fill")
+                        .font(.system(size: 25))
+                        .padding(.leading, 15)
+                }
                 
                 VStack {
-                    Text("Track name")
-                    Text("Artist name")
+                    Text(viewModel.trackName)
+                    Text(viewModel.artistName)
                 }
                 
                 Spacer()
