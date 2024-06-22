@@ -22,6 +22,9 @@
 		83AD4ADC2BB08DBA00408EC6 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4ADB2BB08DBA00408EC6 /* NowPlayingView.swift */; };
 		83AD4ADE2BB08DE700408EC6 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4ADD2BB08DE700408EC6 /* AudioManager.swift */; };
 		83AD4AE02BB0913B00408EC6 /* Dreams.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83AD4ADF2BB0913B00408EC6 /* Dreams.mp3 */; };
+		83ECE1892C15FBCD00F2C38E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE1882C15FBCD00F2C38E /* NetworkManager.swift */; };
+		83ECE18B2C15FE2300F2C38E /* ReflectionsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE18A2C15FE2300F2C38E /* ReflectionsEndpoint.swift */; };
+		83ECE18D2C15FF6C00F2C38E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE18C2C15FF6C00F2C38E /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		83AD4ADB2BB08DBA00408EC6 /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
 		83AD4ADD2BB08DE700408EC6 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		83AD4ADF2BB0913B00408EC6 /* Dreams.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dreams.mp3; sourceTree = "<group>"; };
+		83ECE1882C15FBCD00F2C38E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		83ECE18A2C15FE2300F2C38E /* ReflectionsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionsEndpoint.swift; sourceTree = "<group>"; };
+		83ECE18C2C15FF6C00F2C38E /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 				8327B31A2BAE2FF400D246EB /* HomeViewController.swift */,
 				83AD4AD92BB06C3D00408EC6 /* SubmissionViewController.swift */,
 				83AD4AD52BB0680C00408EC6 /* MusicViewController.swift */,
+				83ECE1882C15FBCD00F2C38E /* NetworkManager.swift */,
+				83ECE18C2C15FF6C00F2C38E /* Track.swift */,
+				83ECE18A2C15FE2300F2C38E /* ReflectionsEndpoint.swift */,
 				83AD4ADB2BB08DBA00408EC6 /* NowPlayingView.swift */,
 				83AD4ADD2BB08DE700408EC6 /* AudioManager.swift */,
 				83AD4AD72BB06BB800408EC6 /* RadioViewController.swift */,
@@ -166,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83ECE1892C15FBCD00F2C38E /* NetworkManager.swift in Sources */,
 				838E96592BEFBC2200C2BC0E /* RFTabBarController.swift in Sources */,
 				83AD4AD62BB0680C00408EC6 /* MusicViewController.swift in Sources */,
 				83AD4AD82BB06BB800408EC6 /* RadioViewController.swift in Sources */,
@@ -176,7 +186,9 @@
 				8327B3172BAE2FF400D246EB /* AppDelegate.swift in Sources */,
 				83AD4ADC2BB08DBA00408EC6 /* NowPlayingView.swift in Sources */,
 				8327B3192BAE2FF400D246EB /* SceneDelegate.swift in Sources */,
+				83ECE18B2C15FE2300F2C38E /* ReflectionsEndpoint.swift in Sources */,
 				838E965D2BEFBD2700C2BC0E /* LoginViewController.swift in Sources */,
+				83ECE18D2C15FF6C00F2C38E /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

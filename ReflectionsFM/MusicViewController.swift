@@ -8,14 +8,6 @@
 import UIKit
 import SwiftUI
 
-
-struct MusicView: View {
-    var body: some View {
-        Text("Music View")
-            .padding()
-    }
-}
-
 class MusicViewController: UIHostingController<MusicView> {
     
     override func viewDidLoad() {
@@ -26,5 +18,21 @@ class MusicViewController: UIHostingController<MusicView> {
     
     // search function
     
-    
 }
+
+struct MusicView: View {
+    
+    var body: some View {
+        VStack {
+            Text("Music View")
+                .padding()
+            
+            Button("Fetch Tracks") {
+                Task {
+                    try await NetworkManager.shared.fetchTracks()
+                }
+            }
+        }
+    }
+}
+
