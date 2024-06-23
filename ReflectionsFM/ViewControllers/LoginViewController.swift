@@ -8,16 +8,21 @@ class LoginViewController: UIHostingController<LoginView> {
         self.rootView = LoginView(onSubmit: submitAction)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.rootView = LoginView(onSubmit: submitAction)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchAndStoreMusic()
+    }
+    
+    private func fetchAndStoreMusic() {
         Task {
-            let fetchedTracks = try await NetworkManager.shared.fetchTracks()
-            MusicService.shared.store(fetchedTracks)
+            showLoading()
+            defer { hideLoading() }
+            
+            do {
+                try await MusicService.shared.fetchAndStoreMusic().value
+            } catch {
+                print("Error fetching and storing music: \(error)")
+            }
         }
     }
     
@@ -25,6 +30,11 @@ class LoginViewController: UIHostingController<LoginView> {
         let tabNav = RFTabBarController()
         tabNav.modalPresentationStyle = .overFullScreen
         self.present(tabNav, animated: false)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.rootView = LoginView(onSubmit: submitAction)
     }
 }
 
@@ -75,3 +85,22 @@ struct LoginView: View {
     }
 }
 
+extension UIHostingController {
+    
+    func showLoading() {
+        guard self.presentedViewController == nil else {
+            print("DESIGN A BETTER LOADING ICON SYSTEM!!!!!!!!!!")
+            return
+        }
+        let loadingVC = RFLoadingViewController(rootView: LoadingView(label: "Fetching mixes and tracks..."))
+        loadingVC.modalPresentationStyle = .overFullScreen
+        present(loadingVC, animated: false)
+    }
+    
+    func hideLoading() {
+        if let spinner = self.presentedViewController as? RFLoadingViewController {
+            spinner.dismiss(animated: true)
+        }
+    }
+    
+}

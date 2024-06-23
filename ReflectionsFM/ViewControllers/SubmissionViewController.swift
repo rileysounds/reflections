@@ -52,19 +52,19 @@ struct SubmissionView: View {
             // artist name
             TextField("Artist Name", text: $artistName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.vertical, 15)
+                .padding(.vertical, 10)
                 .padding(.horizontal, 25)
             
             // email
             TextField("Email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.vertical, 15)
+                .padding(.vertical, 10)
                 .padding(.horizontal, 25)
             
             // track link
             TextField("Link to track or mix", text: $link)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.vertical, 15)
+                .padding(.vertical, 10)
                 .padding(.horizontal, 25)
             
             // segmented control for track, morning drive or mirrrors
@@ -79,12 +79,12 @@ struct SubmissionView: View {
             // something about it
             Text("Tell us about your creation:")
             TextEditor(text: $description)
-                .frame(height: 200)
+                .frame(height: 125)
                 .cornerRadius(10)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.gray, lineWidth: 1)  // Adding a border
-                        .frame(height: 200)
+                        .frame(height: 125)
                 )
                 .padding(.horizontal, 25)
                 .padding(.vertical, 15)

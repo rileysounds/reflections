@@ -16,8 +16,6 @@
 		838E96592BEFBC2200C2BC0E /* RFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E96582BEFBC2200C2BC0E /* RFTabBarController.swift */; };
 		838E965B2BEFBC8700C2BC0E /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E965A2BEFBC8700C2BC0E /* AuthenticationManager.swift */; };
 		838E965D2BEFBD2700C2BC0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E965C2BEFBD2700C2BC0E /* LoginViewController.swift */; };
-		83AD4AD62BB0680C00408EC6 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4AD52BB0680C00408EC6 /* MusicViewController.swift */; };
-		83AD4AD82BB06BB800408EC6 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4AD72BB06BB800408EC6 /* RadioViewController.swift */; };
 		83AD4ADA2BB06C3D00408EC6 /* SubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4AD92BB06C3D00408EC6 /* SubmissionViewController.swift */; };
 		83AD4ADC2BB08DBA00408EC6 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4ADB2BB08DBA00408EC6 /* NowPlayingView.swift */; };
 		83AD4ADE2BB08DE700408EC6 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD4ADD2BB08DE700408EC6 /* AudioManager.swift */; };
@@ -27,6 +25,11 @@
 		83ECE18D2C15FF6C00F2C38E /* CodableTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE18C2C15FF6C00F2C38E /* CodableTrack.swift */; };
 		83ECE18F2C274FCB00F2C38E /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE18E2C274FCB00F2C38E /* MusicService.swift */; };
 		83ECE1912C2762D900F2C38E /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE1902C2762D900F2C38E /* NowPlayingViewModel.swift */; };
+		83ECE1932C27707E00F2C38E /* TrackItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE1922C27707E00F2C38E /* TrackItem.swift */; };
+		83ECE1952C27709D00F2C38E /* MixItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE1942C27709D00F2C38E /* MixItem.swift */; };
+		83ECE1972C28777C00F2C38E /* CodableMix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE1962C28777C00F2C38E /* CodableMix.swift */; };
+		83ECE19D2C287F3700F2C38E /* RFLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE19C2C287F3700F2C38E /* RFLoadingViewController.swift */; };
+		83ECE19F2C28845A00F2C38E /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECE19E2C28845A00F2C38E /* ShopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +44,6 @@
 		838E96582BEFBC2200C2BC0E /* RFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFTabBarController.swift; sourceTree = "<group>"; };
 		838E965A2BEFBC8700C2BC0E /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		838E965C2BEFBD2700C2BC0E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		83AD4AD52BB0680C00408EC6 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
-		83AD4AD72BB06BB800408EC6 /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		83AD4AD92BB06C3D00408EC6 /* SubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionViewController.swift; sourceTree = "<group>"; };
 		83AD4ADB2BB08DBA00408EC6 /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
 		83AD4ADD2BB08DE700408EC6 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
@@ -52,6 +53,11 @@
 		83ECE18C2C15FF6C00F2C38E /* CodableTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTrack.swift; sourceTree = "<group>"; };
 		83ECE18E2C274FCB00F2C38E /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
 		83ECE1902C2762D900F2C38E /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
+		83ECE1922C27707E00F2C38E /* TrackItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackItem.swift; sourceTree = "<group>"; };
+		83ECE1942C27709D00F2C38E /* MixItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixItem.swift; sourceTree = "<group>"; };
+		83ECE1962C28777C00F2C38E /* CodableMix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableMix.swift; sourceTree = "<group>"; };
+		83ECE19C2C287F3700F2C38E /* RFLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFLoadingViewController.swift; sourceTree = "<group>"; };
+		83ECE19E2C28845A00F2C38E /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,18 +93,15 @@
 				8327B3162BAE2FF400D246EB /* AppDelegate.swift */,
 				8327B3182BAE2FF400D246EB /* SceneDelegate.swift */,
 				838E96582BEFBC2200C2BC0E /* RFTabBarController.swift */,
-				838E965C2BEFBD2700C2BC0E /* LoginViewController.swift */,
 				838E965A2BEFBC8700C2BC0E /* AuthenticationManager.swift */,
-				8327B31A2BAE2FF400D246EB /* HomeViewController.swift */,
-				83AD4AD92BB06C3D00408EC6 /* SubmissionViewController.swift */,
-				83AD4AD52BB0680C00408EC6 /* MusicViewController.swift */,
-				83ECE1882C15FBCD00F2C38E /* NetworkManager.swift */,
-				83ECE18C2C15FF6C00F2C38E /* CodableTrack.swift */,
-				83ECE18A2C15FE2300F2C38E /* ReflectionsEndpoint.swift */,
-				83AD4ADB2BB08DBA00408EC6 /* NowPlayingView.swift */,
-				83ECE1902C2762D900F2C38E /* NowPlayingViewModel.swift */,
+				83ECE1922C27707E00F2C38E /* TrackItem.swift */,
+				83ECE1942C27709D00F2C38E /* MixItem.swift */,
+				83ECE19C2C287F3700F2C38E /* RFLoadingViewController.swift */,
+				83ECE19B2C287ED000F2C38E /* ViewControllers */,
+				83ECE1992C287E8900F2C38E /* Networking */,
+				83ECE19A2C287EAB00F2C38E /* Codables */,
+				83ECE1982C287E7400F2C38E /* NowPlaying */,
 				83AD4ADD2BB08DE700408EC6 /* AudioManager.swift */,
-				83AD4AD72BB06BB800408EC6 /* RadioViewController.swift */,
 				83ECE18E2C274FCB00F2C38E /* MusicService.swift */,
 				8327B31C2BAE2FF400D246EB /* Main.storyboard */,
 				8327B31F2BAE2FF400D246EB /* Assets.xcassets */,
@@ -107,6 +110,44 @@
 				83AD4ADF2BB0913B00408EC6 /* Dreams.mp3 */,
 			);
 			path = ReflectionsFM;
+			sourceTree = "<group>";
+		};
+		83ECE1982C287E7400F2C38E /* NowPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				83AD4ADB2BB08DBA00408EC6 /* NowPlayingView.swift */,
+				83ECE1902C2762D900F2C38E /* NowPlayingViewModel.swift */,
+			);
+			path = NowPlaying;
+			sourceTree = "<group>";
+		};
+		83ECE1992C287E8900F2C38E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				83ECE1882C15FBCD00F2C38E /* NetworkManager.swift */,
+				83ECE18A2C15FE2300F2C38E /* ReflectionsEndpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		83ECE19A2C287EAB00F2C38E /* Codables */ = {
+			isa = PBXGroup;
+			children = (
+				83ECE18C2C15FF6C00F2C38E /* CodableTrack.swift */,
+				83ECE1962C28777C00F2C38E /* CodableMix.swift */,
+			);
+			path = Codables;
+			sourceTree = "<group>";
+		};
+		83ECE19B2C287ED000F2C38E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				838E965C2BEFBD2700C2BC0E /* LoginViewController.swift */,
+				8327B31A2BAE2FF400D246EB /* HomeViewController.swift */,
+				83AD4AD92BB06C3D00408EC6 /* SubmissionViewController.swift */,
+				83ECE19E2C28845A00F2C38E /* ShopViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,13 +225,16 @@
 				83ECE1892C15FBCD00F2C38E /* NetworkManager.swift in Sources */,
 				83ECE18F2C274FCB00F2C38E /* MusicService.swift in Sources */,
 				838E96592BEFBC2200C2BC0E /* RFTabBarController.swift in Sources */,
-				83AD4AD62BB0680C00408EC6 /* MusicViewController.swift in Sources */,
-				83AD4AD82BB06BB800408EC6 /* RadioViewController.swift in Sources */,
+				83ECE1932C27707E00F2C38E /* TrackItem.swift in Sources */,
 				838E965B2BEFBC8700C2BC0E /* AuthenticationManager.swift in Sources */,
 				83AD4ADE2BB08DE700408EC6 /* AudioManager.swift in Sources */,
+				83ECE1972C28777C00F2C38E /* CodableMix.swift in Sources */,
 				83AD4ADA2BB06C3D00408EC6 /* SubmissionViewController.swift in Sources */,
+				83ECE1952C27709D00F2C38E /* MixItem.swift in Sources */,
 				83ECE1912C2762D900F2C38E /* NowPlayingViewModel.swift in Sources */,
+				83ECE19F2C28845A00F2C38E /* ShopViewController.swift in Sources */,
 				8327B31B2BAE2FF400D246EB /* HomeViewController.swift in Sources */,
+				83ECE19D2C287F3700F2C38E /* RFLoadingViewController.swift in Sources */,
 				8327B3172BAE2FF400D246EB /* AppDelegate.swift in Sources */,
 				83AD4ADC2BB08DBA00408EC6 /* NowPlayingView.swift in Sources */,
 				8327B3192BAE2FF400D246EB /* SceneDelegate.swift in Sources */,

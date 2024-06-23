@@ -7,6 +7,8 @@ class AudioManager: ObservableObject {
     
     @Published var currentTrack: Track?
     
+    @Published var currentMix: Mix?
+    
     @Published var isPlaying: Bool = false
     
     var player: AVPlayer?
@@ -43,13 +45,19 @@ class AudioManager: ObservableObject {
         player = AVPlayer(url: fileURL)
     }
 
-    func loadRemoteAudioFile(from url: String, track: Track) {
+    func loadRemoteAudioFile(from url: String, track: Track? = nil, mix: Mix? = nil) {
         guard let fileURL = URL(string: url) else {
             print("::: AM - Invalid URL")
             return
         }
         player = AVPlayer(url: fileURL)
-        currentTrack = track
+        if let track {
+            currentTrack = track
+            currentMix = nil
+        } else if let mix {
+            currentMix = mix
+            currentTrack = nil
+        }
     }
 
     func seek(to position: Double) {
